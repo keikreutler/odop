@@ -2,6 +2,11 @@
 Theme
 ***************/
 
+@theme-color: #bf9899;
+@theme-dark: #000000;
+@theme-light: #ffffff;
+
+
 /* basic page styles */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -13,7 +18,7 @@ body {
     font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	color: #555;
-	background-color: #bf9899;
+	background-color: @theme-color;
 	line-height: 1.5;
 }
 
@@ -21,10 +26,6 @@ body {
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
   display: block;
 }
-
-/*****************
-Typography
-*****************/
 
 h1, h2, .logo {
 	font-family: 'Roboto', sans-serif;
@@ -133,14 +134,14 @@ p.articleinfo {
 
 /* layout */
 .content {
-	max-width: 70%;
-	padding: 1em 0.5em;
+	max-width: 50em;
+	padding: 0 0.5em;
 	margin: 0 auto;
 }
 
 main {
 	clear: both;
-	background-color: transparent;
+	background-color: #bf9899;
 	overflow: auto;
 }
 
@@ -152,7 +153,7 @@ header, footer {
 	clear: both;
 	width: 100%;
 	overflow: auto;
-	background-color: transparent;
+	background-color: #eee;
 }
 
 footer {
@@ -196,7 +197,7 @@ footer p {
 }
 
 .nav.main a {
-	color: #fff;
+	color: #222;
 }
 
 .nav a.active, .nav strong {
@@ -207,10 +208,6 @@ footer p {
 	margin-top: 1.5em;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
-}
-
-.nav-side li {
-	display: block;
 }
 
 @media (min-width: 16em) {
@@ -226,6 +223,14 @@ footer p {
 	header {
 		position: fixed;
 		top: 0;
+	}
+
+	.logo {
+		float: left;
+	}
+
+	.nav.main {
+		float: right;
 	}
 
 	.nav li {
@@ -279,22 +284,4 @@ footer p {
 		text-align: right;
 	}
 
-}
-
-
-/*****************
-Layouts
-*****************/
-
-section {
-	width: 100%;
-	min-height: 100vh;
-}
-
-section.feature {
-  background: url(/images/cloud.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }

@@ -34,6 +34,7 @@ var
   sitemap = require('metalsmith-mapsite'),
   rssfeed = require('metalsmith-feed'),
   assets = require('metalsmith-assets'),
+  less = require('metalsmith-less'),
   htmlmin = devBuild ? null : require('metalsmith-html-minifier'),
   browsersync = devBuild ? require('metalsmith-browser-sync') : null,
 
@@ -45,12 +46,12 @@ var
   siteMeta = {
     devBuild: devBuild,
     version: pkg.version,
-    name: 'Static site',
-    desc: 'A demonstration static site built using Metalsmith',
-    author: 'Craig Buckler',
-    contact: 'https://twitter.com/craigbuckler',
+    name: 'Data & Activism',
+    desc: 'Holding copy.',
+    author: 'Tactical Technology Collective',
+    contact: 'https://twitter.com/Info_Activism',
     domain: devBuild ? 'http://127.0.0.1' : 'https://rawgit.com', // set domain
-    rootpath: devBuild ? null : '/craigbuckler/metalsmith-demo/master/build/' // set absolute path (null for relative)
+    rootpath: devBuild ? null : '/keikreutler/odop/master/build/' // set absolute path (null for relative)
   },
 
   templateConfig = {
@@ -76,15 +77,6 @@ var ms = metalsmith(dir.base)
       reverse: true,
       refer: false
     },
-    start: {
-      pattern: 'start/**/*',
-      sortBy: 'priority',
-      reverse: true,
-      refer: true,
-      metadata: {
-        layout: 'article.html'
-      }
-    },
     article: {
       pattern: 'article/**/*',
       sortBy: 'date',
@@ -104,6 +96,7 @@ var ms = metalsmith(dir.base)
     raw: true
   })) // word count
   .use(moremeta()) // determine root paths and navigation
+  .use(less())
   .use(inplace(templateConfig)) // in-page templating
   .use(layouts(templateConfig)); // layout templating
 

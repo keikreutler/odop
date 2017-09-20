@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Future publication - Data &amp; Activism</title>
-<meta name="description" content="This article will be published after 1 March, 2016." />
+<title>Build - Data &amp; Activism</title>
+<meta name="description" content="How to build the static site using Metalsmith." />
 
 <meta name="HandheldFriendly" content="true">
 <meta name="MobileOptimized" content="320">
@@ -22,7 +22,6 @@
 
 	<div class="content">
 
-		<p class="logo"><a href="../../">Data &amp; Activism</a></p>
 		<!-- main navigation -->
 		<nav class="nav main">
 			<ul>
@@ -33,25 +32,19 @@
 					<a href="../../about/">About</a>
 				</li>
 				<li>
-					<a href="../../article/" class="active">Articles</a>
-				</li>
-				<li>
 					<a href="../../research/">Research</a>
-				</li>
-				<li>
-					<a href="../../people/">People</a>
 				</li>
 				<li>
 					<a href="../../programs/">Programs</a>
 				</li>
 				<li>
-					<a href="../../output/">Output</a>
+					<a href="../../people/">People</a>
 				</li>
 				<li>
 					<a href="../../links/">Links</a>
 				</li>
 				<li>
-					<a href="../../contact/">Contact</a>
+					<a href="../../output/">Output</a>
 				</li>
 				<li>
 					<a href="../../events/">Events</a>
@@ -63,59 +56,25 @@
 
 </header>
 
-<main class="subpages">
+
+<section class="feature">
 
 	<div class="content">
 
-		<article>
+			<h1>Build</h1>
 
-			<h1>Future publication</h1>
-
-
-				<p class="articleinfo">Published 1 March 2016, 16 words, 1-minute read</p>
-
-
-			<p>This article will only appear if the site is built is run after 1 March, 2016.</p>
-
-
-
-				<nav class="nav page">
-					<ul>
-
-						<li><a href="../../article/gulp/" class="back">&laquo; back: Gulp</a></li></p>
+		<p>To build and launch the site in a test server using <a href="https://www.browsersync.io/">Browsersync</a>:</p>
+<pre><code>npm start
+</code></pre><p>(Stop the server with <code>Ctrl+C</code>.)</p>
+<p>To build the site for production and compress HTML files:</p>
+<pre><code>npm run production
+</code></pre><p>The site is built in the <code>/build</code> folder.</p>
+<p>Note you may want to change the <code>siteMeta.domain</code> and <code>siteMeta.rootpath</code> on lines 52 and 53 of <code>./build.js</code>.</p>
 
 
-					</ul>
-				</nav>
+	</div>
 
-
-			</article>
-
-		
-			<!-- sub navigation -->
-			<nav class="nav sub">
-				<ul>
-		
-					<li>
-						<a href="../../article/usage/">Usage options</a>
-					</li>
-					<li>
-						<a href="../../article/gotchas/">Gotchas</a>
-					</li>
-					<li>
-						<a href="../../article/gulp/">Gulp</a>
-					</li>
-					<li>
-						<strong>Future publication</strong>
-					</li>
-		
-				</ul>
-			</nav>
-		
-
-		</div>
-
-</main>
+</section>
 
 <footer>
 
