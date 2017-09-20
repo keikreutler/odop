@@ -5,27 +5,23 @@
 </head>
 <body>
 
-{{> header }}
+{{> headerpage }}
 
-<main{{#if navsub}} class="subpages"{{/if}}>
+<section class="feature">
 
 	<div class="content">
 
-		<article>
+		{{> navpage }}
 
-			{{#if title}}
-				<h1>{{ title }}</h1>
-			{{/if}}
+		{{#if title}}
+			<h1>{{ title }}</h1>
+		{{/if}}
 
-			{{{ contents }}}
-
-		</article>
-
-		{{> navsub }}
+		{{{ contents }}}
 
 	</div>
 
-</main>
+</section>
 
 {{> footer template='page' }}
 

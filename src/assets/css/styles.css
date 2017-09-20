@@ -1,3 +1,7 @@
+/***************
+Theme
+***************/
+
 /* basic page styles */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -6,19 +10,24 @@
 }
 
 body {
-	font-family: georgia, cambria, "times new roman", times, serif;
+    font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	color: #555;
-	background-color: #eee;
+	background-color: #bf9899;
 	line-height: 1.5;
 }
+
 
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
   display: block;
 }
 
+/*****************
+Typography
+*****************/
+
 h1, h2, .logo {
-	font-family: arial, helvetica, free-sans, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 }
 
@@ -65,7 +74,7 @@ code {
 	font-family: Consolas, Menlo, "DejaVu Mono", monospace;
 	color: #363;
 	background-color: #eff5ef;
-	border-radius: 3px;
+	border-radius: 3px; 
 	padding: 0 0.2em;
 }
 
@@ -124,14 +133,14 @@ p.articleinfo {
 
 /* layout */
 .content {
-	max-width: 50em;
-	padding: 0 0.5em;
+	max-width: 70%;
+	padding: 1em 0.5em;
 	margin: 0 auto;
 }
 
 main {
 	clear: both;
-	background-color: #fff;
+	background-color: transparent;
 	overflow: auto;
 }
 
@@ -143,7 +152,7 @@ header, footer {
 	clear: both;
 	width: 100%;
 	overflow: auto;
-	background-color: #eee;
+	background-color: transparent;
 }
 
 footer {
@@ -187,17 +196,21 @@ footer p {
 }
 
 .nav.main a {
-	color: #222;
+	color: #fff;
 }
 
 .nav a.active, .nav strong {
-	background-color: #fff;
+	background-color: transparent;
 }
 
 .nav.page {
 	margin-top: 1.5em;
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
+}
+
+.nav-side li {
+	display: block;
 }
 
 @media (min-width: 16em) {
@@ -213,14 +226,6 @@ footer p {
 	header {
 		position: fixed;
 		top: 0;
-	}
-
-	.logo {
-		float: left;
-	}
-
-	.nav.main {
-		float: right;
 	}
 
 	.nav li {
@@ -274,4 +279,22 @@ footer p {
 		text-align: right;
 	}
 
+}
+
+
+/*****************
+Layouts
+*****************/
+
+section {
+	width: 100%;
+	min-height: 100vh;
+}
+
+section.feature {
+  background: url(/images/cloud.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
